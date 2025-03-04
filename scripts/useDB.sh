@@ -6,13 +6,13 @@ useDB_main_menu(){
     select option in "${options[@]}"
     do
         case $option in
-            "Show Tables") . ./showTables.sh;break ;;
-            "Create New Table") . ./createTable.sh; break;;
-            "Insert Into Table") . ./insertIntoTable.sh; break;;
-            "Delete Table") . ./deleteTable.sh; break ;;
-            "Update Table") . ./updateTable.sh; break ;;
-            "UseTable") . ./UseTable.sh; break ;;
-            "Return To Main Menu") . ./mainMenu.sh; exit $? ;;
+            "Show Tables") . ./scripts/useDBscripts/showTables.sh;break ;;
+            "Create New Table") . ./scripts/useDBscripts/createTable.sh; break;;
+            "Insert Into Table") . ./scripts/useDBscripts/insertIntoTable.sh; break;;
+            "Delete Table") . ./scripts/useDBscripts/deleteTable.sh; break ;;
+            "Update Table") . ./scripts/useDBscripts/updateTable.sh; break ;;
+            "UseTable") . ./scripts/useDBscripts/UseTable.sh; break ;;
+            "Return To Main Menu") . ./main_menu.sh; exit $? ;;
             *) echo "Invalid option $REPLY";;
         esac
     done
